@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pathao_app/common_widgets/BottomNavItem.dart';
 import 'package:pathao_app/common_widgets/Extensions.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
+import 'package:pathao_app/gen/assets.gen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -37,14 +38,14 @@ class _MyHomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  BottomNavItem(title: "Offers", iconUrl: "iconUrl"),
-                  BottomNavItem(title: "Home", iconUrl: "iconUrl"),
-                  BottomNavItem(title: "History", iconUrl: "iconUrl"),
+                  BottomNavItem(title: "Offers", iconUrl: Assets.icons.icCampaign, isSelected: false),
+                  BottomNavItem(title: "Home", iconUrl: Assets.icons.icHome, isSelected: true),
+                  BottomNavItem(title: "Orders", iconUrl: Assets.icons.icHistory, isSelected: false),
                 ],
               ),
             )
-                .withPadding(ConstantValues.Padding_16)
-                .withMarginSeparate(ConstantValues.Margin_20, ConstantValues.Margin_20, ConstantValues.Margin_16, ConstantValues.Margin_24)
+                .withPadding(ConstantValues.Padding_8)
+                .withMarginSeparate(ConstantValues.Margin_24, ConstantValues.Margin_24, ConstantValues.Margin_16, ConstantValues.Margin_24)
           ],
         ),
       ),
