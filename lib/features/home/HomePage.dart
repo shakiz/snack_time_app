@@ -17,8 +17,9 @@ class _MyHomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-
+            
           ],
         ),
       ),
