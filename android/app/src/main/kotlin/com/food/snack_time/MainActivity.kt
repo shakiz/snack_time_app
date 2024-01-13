@@ -1,4 +1,4 @@
-package com.ride.pathaoapp.pathao_app
+package com.food.snack_time
 
 import io.flutter.embedding.android.FlutterActivity
 
