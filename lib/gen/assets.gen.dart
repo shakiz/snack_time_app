@@ -19,12 +19,32 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_home.svg
   String get icHome => 'assets/icons/ic_home.svg';
 
+  /// File path: assets/icons/ic_right_arrow.svg
+  String get icRightArrow => 'assets/icons/ic_right_arrow.svg';
+
   /// List of all assets
-  List<String> get values => [icCampaign, icHistory, icHome];
+  List<String> get values => [icCampaign, icHistory, icHome, icRightArrow];
+}
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/onboarding_1.svg
+  String get onboarding1 => 'assets/images/onboarding_1.svg';
+
+  /// File path: assets/images/onboarding_2.svg
+  String get onboarding2 => 'assets/images/onboarding_2.svg';
+
+  /// File path: assets/images/onboarding_3.svg
+  String get onboarding3 => 'assets/images/onboarding_3.svg';
+
+  /// List of all assets
+  List<String> get values => [onboarding1, onboarding2, onboarding3];
 }
 
 class Assets {
   Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
