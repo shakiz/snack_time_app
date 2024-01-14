@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pathao_app/features/onboarding/OnBoardingPage.dart';
+import 'package:get/get.dart';
 import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
+import 'package:pathao_app/routes/AppPages.dart';
+import 'package:pathao_app/routes/AppRoutes.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -16,14 +18,15 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => OnBoardingViewModel())
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'Snack Time',
+        initialRoute: AppRoutes.APP_ROUTE_ONBOARDING,
+        getPages: AppPages.routes,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const OnBoardingPage(),
       ),
     );
   }

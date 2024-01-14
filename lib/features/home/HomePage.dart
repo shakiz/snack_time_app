@@ -5,9 +5,7 @@ import 'package:pathao_app/constants/ConstantValues.dart';
 import 'package:pathao_app/gen/assets.gen.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
-
-  final String title;
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _MyHomePageState();
