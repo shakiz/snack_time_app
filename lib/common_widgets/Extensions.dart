@@ -33,4 +33,18 @@ extension ContainerExtension on Container {
       child: child,
     );
   }
+
+  Container withPaddingSeparate(double paddingLeft, double paddingRight,
+      double paddingTop, double paddingBottom) {
+    return Container(
+      padding: EdgeInsets.only(
+          left: paddingLeft,
+          right: paddingRight,
+          bottom: paddingBottom,
+          top: paddingTop),
+      decoration: decoration,
+      margin: margin,
+      child: child,
+    );
+  }
 }
