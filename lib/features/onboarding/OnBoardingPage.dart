@@ -1,10 +1,11 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pathao_app/common_widgets/OnBoardingItem.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
+import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
+import 'package:pathao_app/gen/assets.gen.dart';
 import 'package:pathao_app/styles/AppColors.dart';
-
-import '../../gen/assets.gen.dart';
+import 'package:provider/provider.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
@@ -16,71 +17,124 @@ class OnBoardingPage extends StatefulWidget {
 class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: AppColors.colorPrimary,
-        child: Stack(
-          children: [
-            Positioned(
-              top: 0,
-              right: 0,
-              child: Container(
-                margin: const EdgeInsets.all(ConstantValues.Margin_24),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Skip".toUpperCase(),
-                  style: const TextStyle(
-                      fontWeight: FontWeight.normal,
-                      decoration: TextDecoration.none,
-                      color: AppColors.colorOnPrimaryBg,
-                      fontSize: ConstantValues.Font_Size_20),
-                ),
-              ),
-            ),
-            Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                top: 64,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [OnBoardingItem()],
+    return Consumer<OnBoardingViewModel>(
+      builder: (BuildContext context, OnBoardingViewModel onBoardingViewModel,
+          Widget? child) {
+        return SafeArea(
+          child: Container(
+            color: AppColors.colorPrimary,
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: Container(
+                    margin: const EdgeInsets.all(ConstantValues.Margin_24),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "Skip".toUpperCase(),
+                      style: const TextStyle(
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.normal,
+                          decoration: TextDecoration.none,
+                          color: AppColors.colorOnPrimaryBg,
+                          fontSize: ConstantValues.Font_Size_20),
+                    ),
                   ),
-                )),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                  alignment: Alignment.bottomCenter,
-                  margin: const EdgeInsets.all(ConstantValues.Margin_16),
-                  padding: const EdgeInsets.all(ConstantValues.Padding_12),
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      color: AppColors.colorPrimary,
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.colorPrimary.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 3,
-                          offset:
-                              const Offset(0, 2), // changes position of shadow
-                        )
-                      ],
-                      borderRadius: const BorderRadius.all(
-                          Radius.circular(ConstantValues.Radius_24))),
-                  child: const Text(
-                    "Let's Go",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: AppColors.colorOnPrimaryBg,
-                        fontSize: ConstantValues.Font_Size_16),
-                  )),
-            )
-          ],
-        ),
-      ),
+                ),
+                Positioned(
+                  top: 48,
+                  left: 0,
+                  right: 0,
+                  child: DotsIndicator(
+                    position: onBoardingViewModel.currentPage,
+                    dotsCount: onBoardingViewModel.getOnBoardingItems().length,
+                    decorator: const DotsDecorator(
+                      size: Size.square(12.0),
+                      activeSize: Size(24.0, 12.0),
+                      color: AppColors.colorSurface_1_5,
+                      activeColor: AppColors.colorOnPrimary,
+                      spacing: EdgeInsets.all(3.0),
+                      activeShape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(ConstantValues.Radius_8)),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    top: 72,
+                    child: PageView.builder(
+                      itemCount:
+                          onBoardingViewModel.getOnBoardingItems().length,
+                      itemBuilder: (context, index) {
+                        return onBoardingViewModel.getOnBoardingItems()[index];
+                      },
+                      onPageChanged: (index) {
+                        onBoardingViewModel.setPage(index);
+                      },
+                    )),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: GestureDetector(
+                    onTap: () {
+                      onBoardingViewModel.moveToNextPage();
+                    },
+                    child: Container(
+                        alignment: Alignment.bottomCenter,
+                        margin: const EdgeInsets.all(ConstantValues.Margin_16),
+                        padding:
+                            const EdgeInsets.all(ConstantValues.Padding_12),
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                            color: AppColors.colorPrimary,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.colorPrimary.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 3,
+                                offset: const Offset(
+                                    0, 2), // changes position of shadow
+                              )
+                            ],
+                            borderRadius: const BorderRadius.all(
+                                Radius.circular(ConstantValues.Radius_24))),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              onBoardingViewModel.getActionText(),
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: "Roboto",
+                                  decoration: TextDecoration.none,
+                                  color: AppColors.colorOnPrimaryBg,
+                                  fontSize: ConstantValues.Font_Size_16),
+                            ),
+                            const SizedBox(
+                              width: ConstantValues.Margin_4,
+                            ),
+                            SvgPicture.asset(
+                              Assets.icons.icRightArrow,
+                              width: ConstantValues.Icon_Size_20,
+                              height: ConstantValues.Icon_Size_20,
+                            )
+                          ],
+                        )),
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
