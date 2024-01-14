@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pathao_app/common_widgets/Extensions.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
+import 'package:pathao_app/styles/AppColors.dart';
 
 class BottomNavItem extends StatefulWidget {
   String title, iconUrl;
@@ -24,9 +25,9 @@ class _BottomNavItemState extends State<BottomNavItem> {
     return GestureDetector(
       child: Container(
         decoration: isSelected ? BoxDecoration(
-          color: Colors.red.withOpacity(0.3),
-          borderRadius: const BorderRadius.all(Radius.circular(ConstantValues.Radius_16))
-        ) : const BoxDecoration(),
+            color: AppColors.colorPrimary.withOpacity(0.3),
+                borderRadius: const BorderRadius.all(
+                    Radius.circular(ConstantValues.Radius_16))) : const BoxDecoration(),
         child: Row(children: [
           SizedBox(
             width: 20,

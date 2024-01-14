@@ -13,6 +13,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_campaign.svg
   String get icCampaign => 'assets/icons/ic_campaign.svg';
 
+  /// File path: assets/icons/ic_filter.svg
+  String get icFilter => 'assets/icons/ic_filter.svg';
+
   /// File path: assets/icons/ic_history.svg
   String get icHistory => 'assets/icons/ic_history.svg';
 
@@ -22,8 +25,22 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_right_arrow.svg
   String get icRightArrow => 'assets/icons/ic_right_arrow.svg';
 
+  /// File path: assets/icons/ic_search.svg
+  String get icSearch => 'assets/icons/ic_search.svg';
+
+  /// File path: assets/icons/ic_voice.svg
+  String get icVoice => 'assets/icons/ic_voice.svg';
+
   /// List of all assets
-  List<String> get values => [icCampaign, icHistory, icHome, icRightArrow];
+  List<String> get values => [
+        icCampaign,
+        icFilter,
+        icHistory,
+        icHome,
+        icRightArrow,
+        icSearch,
+        icVoice
+      ];
 }
 
 class $AssetsImagesGen {

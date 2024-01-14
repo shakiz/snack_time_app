@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
 import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
@@ -17,6 +18,8 @@ class OnBoardingPage extends StatefulWidget {
 class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: AppColors.colorPrimary));
     return Consumer<OnBoardingViewModel>(
       builder: (BuildContext context, OnBoardingViewModel onBoardingViewModel,
           Widget? child) {
@@ -70,7 +73,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     child: PageView.builder(
                       controller: onBoardingViewModel.pageController,
                       itemCount:
-                          onBoardingViewModel.getOnBoardingItems().length,
+                      onBoardingViewModel.getOnBoardingItems().length,
                       itemBuilder: (context, index) {
                         return onBoardingViewModel.getOnBoardingItems()[index];
                       },
@@ -90,7 +93,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         alignment: Alignment.bottomCenter,
                         margin: const EdgeInsets.all(ConstantValues.Margin_16),
                         padding:
-                            const EdgeInsets.all(ConstantValues.Padding_12),
+                        const EdgeInsets.all(ConstantValues.Padding_12),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                             color: AppColors.colorPrimary,
