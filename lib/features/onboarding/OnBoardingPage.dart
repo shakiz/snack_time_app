@@ -68,6 +68,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     right: 0,
                     top: 72,
                     child: PageView.builder(
+                      controller: onBoardingViewModel.pageController,
                       itemCount:
                           onBoardingViewModel.getOnBoardingItems().length,
                       itemBuilder: (context, index) {
@@ -83,7 +84,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   right: 0,
                   child: GestureDetector(
                     onTap: () {
-                      onBoardingViewModel.moveToNextPage();
+                      onBoardingViewModel.nextPage();
                     },
                     child: Container(
                         alignment: Alignment.bottomCenter,
