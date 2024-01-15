@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pathao_app/features/home/HomeViewModel.dart';
 import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
 import 'package:pathao_app/routes/AppPages.dart';
 import 'package:pathao_app/routes/AppRoutes.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => OnBoardingViewModel())
+        ChangeNotifierProvider(create: (context) => OnBoardingViewModel()),
+        ChangeNotifierProvider(create: (context) => HomeVIewModel())
       ],
       child: GetMaterialApp(
         title: 'Snack Time',

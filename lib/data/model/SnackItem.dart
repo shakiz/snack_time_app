@@ -1,11 +1,11 @@
 class SnackItem {
-  String? title;
+  String title;
   String snackBannerUrl;
   bool? isSaved;
   bool? isBookmarked;
-  List<String>? tags;
+  List<String> tags;
   String? createdAt;
-  String? author;
+  String author;
   String? authorProfileImgUrl;
 
   SnackItem(this.title, this.snackBannerUrl, this.isSaved, this.isBookmarked,
