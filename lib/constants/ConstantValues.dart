@@ -1,4 +1,5 @@
 class ConstantValues{
+  static const double Radius_42 = 42;
   static const double Radius_20 = 20;
   static const double Radius_8 = 8;
   static const double Radius_16 = 16;

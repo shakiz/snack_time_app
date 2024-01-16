@@ -95,6 +95,42 @@ class _MyHomePageState extends State<HomePage> {
                     height: ConstantValues.Margin_8,
                   ),
                   CommonSnackItem(snackItem: homeVIewModel.getNewAddedItem()),
+                  const SizedBox(
+                    height: ConstantValues.Margin_20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: ConstantValues.Padding_16,
+                        right: ConstantValues.Padding_16),
+                    child: SizedBox(
+                      height: 84,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemCount: homeVIewModel.getUserStory().length,
+                          itemBuilder: (context, index) {
+                            return Container(
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(ConstantValues.Radius_42)),
+                                color: AppColors.colorPrimary,
+                              ),
+                              child: ClipRRect(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(
+                                          ConstantValues.Radius_42)),
+                                  child: Image(
+                                    image: AssetImage(homeVIewModel
+                                        .getUserStory()[index]
+                                        .userAvatarUrl),
+                                  )),
+                            )
+                                .withPadding(ConstantValues.Padding_4)
+                                .withMarginSeparate(
+                                    0, ConstantValues.Margin_16, 0, 0);
+                          }),
+                    ),
+                  )
                 ],
               ),
             ),

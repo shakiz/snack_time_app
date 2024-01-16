@@ -12,6 +12,10 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ic_add_story.png
+  AssetGenImage get icAddStory =>
+      const AssetGenImage('assets/icons/ic_add_story.png');
+
   /// File path: assets/icons/ic_bookmark.svg
   String get icBookmark => 'assets/icons/ic_bookmark.svg';
 
@@ -40,8 +44,8 @@ class $AssetsIconsGen {
   String get icVoice => 'assets/icons/ic_voice.svg';
 
   /// List of all assets
-  List<String> get values =>
-      [
+  List<dynamic> get values => [
+        icAddStory,
         icBookmark,
         icCampaign,
         icFilter,
