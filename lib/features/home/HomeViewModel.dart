@@ -5,17 +5,37 @@ import '../../data/model/UserStory.dart';
 import '../../gen/assets.gen.dart';
 
 class HomeVIewModel extends ChangeNotifier {
-  SnackItem getNewAddedItem() {
+  List<SnackItem> getNewAddedItem() {
     List<String> tags = ["From Chef", "Challenge"];
-    return SnackItem(
-        "Salmon and baked vegetables — Fish Сhallenge",
-        Assets.images.bannerNewSnackItem.path,
-        true,
-        false,
-        tags,
-        "20 min",
-        "Joe Johnson",
-        Assets.images.icDummyUser.path);
+    return [
+      SnackItem(
+          "Salmon and baked vegetables — Fish Сhallenge",
+          Assets.images.bannerNewSnackItem.path,
+          true,
+          false,
+          tags,
+          "20 min",
+          "Joe Johnson",
+          Assets.images.icDummyUser.path),
+      SnackItem(
+          "Fried Bacon with Vegetables - Quick",
+          Assets.images.bannerNewSnackItem1.path,
+          true,
+          false,
+          ["Protein", "Health"],
+          "10 min",
+          "",
+          Assets.images.icDummyUser1.path),
+      SnackItem(
+          "Double Decker beef Sandwich",
+          Assets.images.bannerNewSnackItem2.path,
+          false,
+          true,
+          ["Nutritious", "Health"],
+          "5 min",
+          "",
+          Assets.images.icDummyUser2.path)
+    ];
   }
 
   List<UserStory> getUserStory() {

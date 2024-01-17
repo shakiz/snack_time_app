@@ -66,7 +66,7 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                           color: AppColors.colorPrimary,
                         ),
                         child: Text(
-                          snackItem.tags[index],
+                          "#${snackItem.tags[index]}",
                           style: const TextStyle(
                               fontSize: ConstantValues.Font_Size_12,
                               color: AppColors.colorOnPrimaryBg),

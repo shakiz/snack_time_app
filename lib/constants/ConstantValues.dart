@@ -5,6 +5,7 @@ class ConstantValues{
   static const double Radius_16 = 16;
   static const double Radius_24 = 24;
 
+  static const double Padding_2 = 2;
   static const double Padding_4 = 4;
   static const double Padding_8 = 8;
   static const double Padding_20 = 20;
