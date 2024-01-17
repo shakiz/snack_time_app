@@ -65,9 +65,25 @@ class $AssetsImagesGen {
   AssetGenImage get bannerNewSnackItem =>
       const AssetGenImage('assets/images/banner_new_snack_item.png');
 
+  /// File path: assets/images/banner_new_snack_item_1.png
+  AssetGenImage get bannerNewSnackItem1 =>
+      const AssetGenImage('assets/images/banner_new_snack_item_1.png');
+
+  /// File path: assets/images/banner_new_snack_item_2.png
+  AssetGenImage get bannerNewSnackItem2 =>
+      const AssetGenImage('assets/images/banner_new_snack_item_2.png');
+
   /// File path: assets/images/ic_dummy_user.png
   AssetGenImage get icDummyUser =>
       const AssetGenImage('assets/images/ic_dummy_user.png');
+
+  /// File path: assets/images/ic_dummy_user_1.png
+  AssetGenImage get icDummyUser1 =>
+      const AssetGenImage('assets/images/ic_dummy_user_1.png');
+
+  /// File path: assets/images/ic_dummy_user_2.png
+  AssetGenImage get icDummyUser2 =>
+      const AssetGenImage('assets/images/ic_dummy_user_2.png');
 
   /// File path: assets/images/ic_story_user_1.png
   AssetGenImage get icStoryUser1 =>
@@ -91,9 +107,14 @@ class $AssetsImagesGen {
   String get onboarding3 => 'assets/images/onboarding_3.svg';
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<dynamic> get values =>
+      [
         bannerNewSnackItem,
+        bannerNewSnackItem1,
+        bannerNewSnackItem2,
         icDummyUser,
+        icDummyUser1,
+        icDummyUser2,
         icStoryUser1,
         icStoryUser2,
         icStoryUser3,
