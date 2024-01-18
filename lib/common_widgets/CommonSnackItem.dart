@@ -10,21 +10,26 @@ import '../gen/assets.gen.dart';
 
 class CommonSnackItem extends StatefulWidget {
   SnackItem snackItem;
+  double itemWidth;
 
-  CommonSnackItem({super.key, required this.snackItem});
+  CommonSnackItem(
+      {super.key, required this.snackItem, required this.itemWidth});
 
   @override
-  State<CommonSnackItem> createState() => _CommonSnackItemState(snackItem);
+  State<CommonSnackItem> createState() =>
+      _CommonSnackItemState(snackItem, itemWidth);
 }
 
 class _CommonSnackItemState extends State<CommonSnackItem> {
   SnackItem snackItem;
+  double itemWidth;
 
-  _CommonSnackItemState(this.snackItem);
+  _CommonSnackItemState(this.snackItem, this.itemWidth);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: itemWidth,
       decoration: BoxDecoration(
           color: AppColors.colorOnPrimary,
           borderRadius: const BorderRadius.all(
@@ -46,8 +51,9 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                   topRight: Radius.circular(ConstantValues.Radius_20)),
               child: Image(
                 image: AssetImage(snackItem.snackBannerUrl),
-                fit: BoxFit.fill,
-                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover,
+                width: itemWidth,
+                height: MediaQuery.of(context).size.height / 5,
               )),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,10 +79,10 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                         ),
                       )
                           .withPaddingSeparate(
-                              ConstantValues.Padding_8,
-                              ConstantValues.Padding_8,
-                              ConstantValues.Padding_4,
-                              ConstantValues.Padding_4)
+                          ConstantValues.Padding_8,
+                          ConstantValues.Padding_8,
+                          ConstantValues.Padding_4,
+                          ConstantValues.Padding_4)
                           .withMargin(ConstantValues.Margin_8);
                     }),
               ),
@@ -93,6 +99,8 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                 right: ConstantValues.Margin_8, left: ConstantValues.Margin_8),
             child: Text(
               snackItem.title,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
               style: const TextStyle(
                   color: AppColors.colorOnPrimaryBg,
                   fontSize: ConstantValues.Font_Size_24,
@@ -109,7 +117,7 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                 children: [
                   Container(
                       margin:
-                          const EdgeInsets.only(left: ConstantValues.Margin_8),
+                      const EdgeInsets.only(left: ConstantValues.Margin_8),
                       child: Image(
                         image: AssetImage(Assets.images.icDummyUser.path),
                       )),
@@ -133,6 +141,9 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
         ],
       ),
     ).withPaddingSeparate(0, 0, 0, ConstantValues.Padding_8).withMarginSeparate(
-        ConstantValues.Margin_16, ConstantValues.Margin_16, 0, 0);
+        ConstantValues.Margin_16,
+        ConstantValues.Margin_16,
+        0,
+        ConstantValues.Margin_16);
   }
 }

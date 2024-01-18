@@ -5,6 +5,9 @@ import '../../data/model/UserStory.dart';
 import '../../gen/assets.gen.dart';
 
 class HomeVIewModel extends ChangeNotifier {
+  int currentPage = 0;
+  final PageController pageController = PageController();
+
   List<SnackItem> getNewAddedItem() {
     List<String> tags = ["From Chef", "Challenge"];
     return [
@@ -24,7 +27,7 @@ class HomeVIewModel extends ChangeNotifier {
           false,
           ["Protein", "Health"],
           "10 min",
-          "",
+          "David Miller",
           Assets.images.icDummyUser1.path),
       SnackItem(
           "Double Decker beef Sandwich",
@@ -33,7 +36,7 @@ class HomeVIewModel extends ChangeNotifier {
           true,
           ["Nutritious", "Health"],
           "5 min",
-          "",
+          "Jason Hermon",
           Assets.images.icDummyUser2.path)
     ];
   }
@@ -46,5 +49,18 @@ class HomeVIewModel extends ChangeNotifier {
       UserStory(3, Assets.images.icStoryUser3.path),
     ];
     return userStoryList;
+  }
+
+  void nextPage(int currentPage) {
+    this.currentPage = currentPage;
+    if (currentPage < getNewAddedItem().length - 1) {
+      currentPage++;
+      pageController.animateToPage(
+        currentPage,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+      notifyListeners();
+    }
   }
 }

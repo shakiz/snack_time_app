@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:pathao_app/common_widgets/BottomNavItem.dart';
 import 'package:pathao_app/common_widgets/CommonSnackItem.dart';
@@ -63,6 +64,9 @@ class _MyHomePageState extends State<HomePage> {
                 ConstantValues.Margin_24),
             body: ListView(
               children: <Widget>[
+                const SizedBox(
+                  height: ConstantValues.Margin_16,
+                ),
                 const ExtendedSearchBar(),
                 const SizedBox(
                   height: ConstantValues.Margin_16,
@@ -95,6 +99,7 @@ class _MyHomePageState extends State<HomePage> {
                 ),
                 CommonSnackItem(
                   snackItem: homeVIewModel.getNewAddedItem().first,
+                  itemWidth: MediaQuery.of(context).size.width,
                 ),
                 const SizedBox(
                   height: ConstantValues.Margin_20,
@@ -127,7 +132,7 @@ class _MyHomePageState extends State<HomePage> {
                           )
                               .withPadding(ConstantValues.Padding_2)
                               .withMarginSeparate(
-                                  0, ConstantValues.Margin_16, 0, 0);
+                              0, ConstantValues.Margin_16, 0, 0);
                         }),
                   ),
                 ),
@@ -162,7 +167,7 @@ class _MyHomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.only(right: ConstantValues.Padding_16),
+                  const EdgeInsets.only(right: ConstantValues.Padding_16),
                   child: SizedBox(
                     height: 340,
                     child: ListView.builder(
@@ -181,6 +186,41 @@ class _MyHomePageState extends State<HomePage> {
                 const SizedBox(
                   height: ConstantValues.Margin_8,
                 ),
+                SizedBox(
+                  height: 320,
+                  child: PageView.builder(
+                    physics: const PageScrollPhysics(),
+                    controller: homeVIewModel.pageController,
+                    itemCount: homeVIewModel.getNewAddedItem().length,
+                    itemBuilder: (context, index) {
+                      return CommonSnackItem(
+                        snackItem: homeVIewModel.getNewAddedItem()[index],
+                        itemWidth: MediaQuery.of(context).size.width,
+                      );
+                    },
+                    onPageChanged: (index) {
+                      homeVIewModel.nextPage(index);
+                    },
+                  ),
+                ),
+                DotsIndicator(
+                  position: homeVIewModel.currentPage,
+                  dotsCount: homeVIewModel.getNewAddedItem().length,
+                  decorator: const DotsDecorator(
+                    size: Size.square(12.0),
+                    activeSize: Size(24.0, 12.0),
+                    color: AppColors.colorSurface_1_5,
+                    activeColor: AppColors.colorPrimary,
+                    spacing: EdgeInsets.all(3.0),
+                    activeShape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(ConstantValues.Radius_8)),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: ConstantValues.Margin_16,
+                )
               ],
             ),
           ),
