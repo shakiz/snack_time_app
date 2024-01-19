@@ -8,6 +8,11 @@ class HomeVIewModel extends ChangeNotifier {
   int currentPage = 0;
   final PageController pageController = PageController();
 
+  void animateToNextPage(int pageNo) {
+    currentPage = pageNo;
+    notifyListeners();
+  }
+
   List<SnackItem> getNewAddedItem() {
     List<String> tags = ["From Chef", "Challenge"];
     return [
@@ -51,16 +56,15 @@ class HomeVIewModel extends ChangeNotifier {
     return userStoryList;
   }
 
-  void nextPage(int currentPage) {
-    this.currentPage = currentPage;
-    if (currentPage < getNewAddedItem().length - 1) {
-      currentPage++;
-      pageController.animateToPage(
-        currentPage,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-      notifyListeners();
-    }
+  SnackItem getNewDietItem() {
+    return SnackItem(
+        "Diet of Vegetables and Beans",
+        Assets.images.bannerNewDietItem.path,
+        true,
+        false,
+        ["From Chef", "Challenge"],
+        "32 min",
+        "Jack Whiling",
+        Assets.images.icDummyUser2.path);
   }
 }

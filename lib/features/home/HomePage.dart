@@ -1,8 +1,10 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:pathao_app/common_widgets/BottomNavItem.dart';
 import 'package:pathao_app/common_widgets/CommonSnackItem.dart';
 import 'package:pathao_app/common_widgets/CommonSnackItemSmall.dart';
+import 'package:pathao_app/common_widgets/DietItem.dart';
 import 'package:pathao_app/common_widgets/Extensions.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
 import 'package:pathao_app/features/home/HomeViewModel.dart';
@@ -100,6 +102,7 @@ class _MyHomePageState extends State<HomePage> {
                 CommonSnackItem(
                   snackItem: homeVIewModel.getNewAddedItem().first,
                   itemWidth: MediaQuery.of(context).size.width,
+                  bannerHeight: MediaQuery.of(context).size.height / 5,
                 ),
                 const SizedBox(
                   height: ConstantValues.Margin_20,
@@ -186,22 +189,22 @@ class _MyHomePageState extends State<HomePage> {
                 const SizedBox(
                   height: ConstantValues.Margin_8,
                 ),
-                SizedBox(
-                  height: 320,
-                  child: PageView.builder(
-                    physics: const PageScrollPhysics(),
-                    controller: homeVIewModel.pageController,
-                    itemCount: homeVIewModel.getNewAddedItem().length,
-                    itemBuilder: (context, index) {
-                      return CommonSnackItem(
-                        snackItem: homeVIewModel.getNewAddedItem()[index],
-                        itemWidth: MediaQuery.of(context).size.width,
-                      );
-                    },
-                    onPageChanged: (index) {
-                      homeVIewModel.nextPage(index);
-                    },
-                  ),
+                CarouselSlider.builder(
+                  itemCount: homeVIewModel.getNewAddedItem().length,
+                  options: CarouselOptions(
+                      autoPlay: true,
+                      enlargeCenterPage: false,
+                      onPageChanged: (index, reason) {
+                        homeVIewModel.animateToNextPage(index);
+                      }),
+                  itemBuilder:
+                      (BuildContext context, int index, int realIndex) {
+                    return CommonSnackItem(
+                      snackItem: homeVIewModel.getNewAddedItem()[index],
+                      itemWidth: MediaQuery.of(context).size.width,
+                      bannerHeight: 90,
+                    );
+                  },
                 ),
                 DotsIndicator(
                   position: homeVIewModel.currentPage,
@@ -218,6 +221,12 @@ class _MyHomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: ConstantValues.Margin_16,
+                ),
+                DietItem(
+                    snackItem: homeVIewModel.getNewDietItem(),
+                    itemWidth: MediaQuery.of(context).size.width),
                 const SizedBox(
                   height: ConstantValues.Margin_16,
                 )

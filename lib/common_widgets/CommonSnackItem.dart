@@ -11,20 +11,25 @@ import '../gen/assets.gen.dart';
 class CommonSnackItem extends StatefulWidget {
   SnackItem snackItem;
   double itemWidth;
+  double bannerHeight;
 
   CommonSnackItem(
-      {super.key, required this.snackItem, required this.itemWidth});
+      {super.key,
+      required this.snackItem,
+      required this.itemWidth,
+      required this.bannerHeight});
 
   @override
   State<CommonSnackItem> createState() =>
-      _CommonSnackItemState(snackItem, itemWidth);
+      _CommonSnackItemState(snackItem, itemWidth, bannerHeight);
 }
 
 class _CommonSnackItemState extends State<CommonSnackItem> {
   SnackItem snackItem;
   double itemWidth;
+  double bannerHeight;
 
-  _CommonSnackItemState(this.snackItem, this.itemWidth);
+  _CommonSnackItemState(this.snackItem, this.itemWidth, this.bannerHeight);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +58,7 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
                 image: AssetImage(snackItem.snackBannerUrl),
                 fit: BoxFit.cover,
                 width: itemWidth,
-                height: MediaQuery.of(context).size.height / 5,
+                height: bannerHeight,
               )),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -61,6 +61,10 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/banner_new_diet_item.png
+  AssetGenImage get bannerNewDietItem =>
+      const AssetGenImage('assets/images/banner_new_diet_item.png');
+
   /// File path: assets/images/banner_new_snack_item.png
   AssetGenImage get bannerNewSnackItem =>
       const AssetGenImage('assets/images/banner_new_snack_item.png');
@@ -107,8 +111,8 @@ class $AssetsImagesGen {
   String get onboarding3 => 'assets/images/onboarding_3.svg';
 
   /// List of all assets
-  List<dynamic> get values =>
-      [
+  List<dynamic> get values => [
+        bannerNewDietItem,
         bannerNewSnackItem,
         bannerNewSnackItem1,
         bannerNewSnackItem2,
