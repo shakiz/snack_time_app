@@ -16,6 +16,9 @@ class $AssetsIconsGen {
   AssetGenImage get icAddStory =>
       const AssetGenImage('assets/icons/ic_add_story.png');
 
+  /// File path: assets/icons/ic_arrow_left.svg
+  String get icArrowLeft => 'assets/icons/ic_arrow_left.svg';
+
   /// File path: assets/icons/ic_bookmark.svg
   String get icBookmark => 'assets/icons/ic_bookmark.svg';
 
@@ -34,11 +37,21 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_like.svg
   String get icLike => 'assets/icons/ic_like.svg';
 
+  /// File path: assets/icons/ic_play_with_bg.png
+  AssetGenImage get icPlayWithBg =>
+      const AssetGenImage('assets/icons/ic_play_with_bg.png');
+
+  /// File path: assets/icons/ic_rating.svg
+  String get icRating => 'assets/icons/ic_rating.svg';
+
   /// File path: assets/icons/ic_right_arrow.svg
   String get icRightArrow => 'assets/icons/ic_right_arrow.svg';
 
   /// File path: assets/icons/ic_search.svg
   String get icSearch => 'assets/icons/ic_search.svg';
+
+  /// File path: assets/icons/ic_share.svg
+  String get icShare => 'assets/icons/ic_share.svg';
 
   /// File path: assets/icons/ic_voice.svg
   String get icVoice => 'assets/icons/ic_voice.svg';
@@ -46,20 +59,28 @@ class $AssetsIconsGen {
   /// List of all assets
   List<dynamic> get values => [
         icAddStory,
+        icArrowLeft,
         icBookmark,
         icCampaign,
         icFilter,
         icHistory,
         icHome,
         icLike,
+        icPlayWithBg,
+        icRating,
         icRightArrow,
         icSearch,
+        icShare,
         icVoice
       ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/banner_item_details.png
+  AssetGenImage get bannerItemDetails =>
+      const AssetGenImage('assets/images/banner_item_details.png');
 
   /// File path: assets/images/banner_new_diet_item.png
   AssetGenImage get bannerNewDietItem =>
@@ -111,7 +132,9 @@ class $AssetsImagesGen {
   String get onboarding3 => 'assets/images/onboarding_3.svg';
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<dynamic> get values =>
+      [
+        bannerItemDetails,
         bannerNewDietItem,
         bannerNewSnackItem,
         bannerNewSnackItem1,
