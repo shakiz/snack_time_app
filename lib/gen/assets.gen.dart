@@ -28,6 +28,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_filter.svg
   String get icFilter => 'assets/icons/ic_filter.svg';
 
+  /// File path: assets/icons/ic_fire.svg
+  String get icFire => 'assets/icons/ic_fire.svg';
+
   /// File path: assets/icons/ic_history.svg
   String get icHistory => 'assets/icons/ic_history.svg';
 
@@ -44,6 +47,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_rating.svg
   String get icRating => 'assets/icons/ic_rating.svg';
 
+  /// File path: assets/icons/ic_reaction.svg
+  String get icReaction => 'assets/icons/ic_reaction.svg';
+
   /// File path: assets/icons/ic_right_arrow.svg
   String get icRightArrow => 'assets/icons/ic_right_arrow.svg';
 
@@ -56,6 +62,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_voice.svg
   String get icVoice => 'assets/icons/ic_voice.svg';
 
+  /// File path: assets/icons/ic_watch.svg
+  String get icWatch => 'assets/icons/ic_watch.svg';
+
   /// List of all assets
   List<dynamic> get values => [
         icAddStory,
@@ -63,15 +72,18 @@ class $AssetsIconsGen {
         icBookmark,
         icCampaign,
         icFilter,
+        icFire,
         icHistory,
         icHome,
         icLike,
         icPlayWithBg,
         icRating,
+        icReaction,
         icRightArrow,
         icSearch,
         icShare,
-        icVoice
+        icVoice,
+        icWatch
       ];
 }
 
@@ -132,8 +144,7 @@ class $AssetsImagesGen {
   String get onboarding3 => 'assets/images/onboarding_3.svg';
 
   /// List of all assets
-  List<dynamic> get values =>
-      [
+  List<dynamic> get values => [
         bannerItemDetails,
         bannerNewDietItem,
         bannerNewSnackItem,
