@@ -37,7 +37,7 @@ class _CommonSnackItemState extends State<CommonSnackItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.offNamed(AppRoutes.APP_ROUTE_ITEM_DETAILS);
+        Get.toNamed(AppRoutes.APP_ROUTE_ITEM_DETAILS);
       },
       child: Container(
         width: itemWidth,

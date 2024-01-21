@@ -40,9 +40,24 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_like.svg
   String get icLike => 'assets/icons/ic_like.svg';
 
+  /// File path: assets/icons/ic_minus.svg
+  String get icMinus => 'assets/icons/ic_minus.svg';
+
+  /// File path: assets/icons/ic_nutrition_1.svg
+  String get icNutrition1 => 'assets/icons/ic_nutrition_1.svg';
+
+  /// File path: assets/icons/ic_nutrition_2.svg
+  String get icNutrition2 => 'assets/icons/ic_nutrition_2.svg';
+
+  /// File path: assets/icons/ic_nutrition_3.svg
+  String get icNutrition3 => 'assets/icons/ic_nutrition_3.svg';
+
   /// File path: assets/icons/ic_play_with_bg.png
   AssetGenImage get icPlayWithBg =>
       const AssetGenImage('assets/icons/ic_play_with_bg.png');
+
+  /// File path: assets/icons/ic_plus.svg
+  String get icPlus => 'assets/icons/ic_plus.svg';
 
   /// File path: assets/icons/ic_rating.svg
   String get icRating => 'assets/icons/ic_rating.svg';
@@ -58,6 +73,15 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_share.svg
   String get icShare => 'assets/icons/ic_share.svg';
+
+  /// File path: assets/icons/ic_utensils_1.svg
+  String get icUtensils1 => 'assets/icons/ic_utensils_1.svg';
+
+  /// File path: assets/icons/ic_utensils_2.svg
+  String get icUtensils2 => 'assets/icons/ic_utensils_2.svg';
+
+  /// File path: assets/icons/ic_utensils_3.svg
+  String get icUtensils3 => 'assets/icons/ic_utensils_3.svg';
 
   /// File path: assets/icons/ic_voice.svg
   String get icVoice => 'assets/icons/ic_voice.svg';
@@ -76,12 +100,20 @@ class $AssetsIconsGen {
         icHistory,
         icHome,
         icLike,
+        icMinus,
+        icNutrition1,
+        icNutrition2,
+        icNutrition3,
         icPlayWithBg,
+        icPlus,
         icRating,
         icReaction,
         icRightArrow,
         icSearch,
         icShare,
+        icUtensils1,
+        icUtensils2,
+        icUtensils3,
         icVoice,
         icWatch
       ];
@@ -143,6 +175,18 @@ class $AssetsImagesGen {
   /// File path: assets/images/onboarding_3.svg
   String get onboarding3 => 'assets/images/onboarding_3.svg';
 
+  /// File path: assets/images/review_image_1.png
+  AssetGenImage get reviewImage1 =>
+      const AssetGenImage('assets/images/review_image_1.png');
+
+  /// File path: assets/images/review_image_2.png
+  AssetGenImage get reviewImage2 =>
+      const AssetGenImage('assets/images/review_image_2.png');
+
+  /// File path: assets/images/review_image_3.png
+  AssetGenImage get reviewImage3 =>
+      const AssetGenImage('assets/images/review_image_3.png');
+
   /// List of all assets
   List<dynamic> get values => [
         bannerItemDetails,
@@ -158,7 +202,10 @@ class $AssetsImagesGen {
         icStoryUser3,
         onboarding1,
         onboarding2,
-        onboarding3
+        onboarding3,
+        reviewImage1,
+        reviewImage2,
+        reviewImage3
       ];
 }
 
