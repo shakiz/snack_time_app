@@ -2,9 +2,12 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:pathao_app/constants/ConstantValues.dart';
 import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
 import 'package:pathao_app/gen/assets.gen.dart';
+import 'package:pathao_app/routes/AppRoutes.dart';
 import 'package:pathao_app/styles/AppColors.dart';
 import 'package:provider/provider.dart';
 
@@ -31,17 +34,22 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 Positioned(
                   top: 0,
                   right: 0,
-                  child: Container(
-                    margin: const EdgeInsets.all(ConstantValues.Margin_24),
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "Skip".toUpperCase(),
-                      style: const TextStyle(
-                          fontFamily: "Roboto",
-                          fontWeight: FontWeight.normal,
-                          decoration: TextDecoration.none,
-                          color: AppColors.colorOnPrimaryBg,
-                          fontSize: ConstantValues.Font_Size_20),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.offNamed(AppRoutes.APP_ROUTE_HOME);
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(ConstantValues.Margin_24),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "Skip".toUpperCase(),
+                        style: const TextStyle(
+                            fontFamily: "Roboto",
+                            fontWeight: FontWeight.normal,
+                            decoration: TextDecoration.none,
+                            color: AppColors.colorOnPrimaryBg,
+                            fontSize: ConstantValues.Font_Size_20),
+                      ),
                     ),
                   ),
                 ),
