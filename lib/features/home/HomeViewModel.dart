@@ -1,15 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:snack_time/data/model/SnackItem.dart';
+import 'package:snack_time/features/home/HomePage.dart';
+import 'package:snack_time/features/profile/ProfilePage.dart';
 
 import '../../data/model/UserStory.dart';
 import '../../gen/assets.gen.dart';
 
 class HomeVIewModel extends ChangeNotifier {
-  int currentPage = 0;
+  int currentSliderItem = 0;
   final PageController pageController = PageController();
 
+  final appPages = [
+    const HomePage(),
+    const ProfilePage(),
+  ];
+
   void animateToNextPage(int pageNo) {
-    currentPage = pageNo;
+    currentSliderItem = pageNo;
     notifyListeners();
   }
 

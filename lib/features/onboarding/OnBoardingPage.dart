@@ -35,7 +35,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   right: 0,
                   child: GestureDetector(
                     onTap: () {
-                      Get.offNamed(AppRoutes.APP_ROUTE_HOME);
+                      Get.offNamed(AppRoutes.APP_ROUTE_MAIN);
                     },
                     child: Container(
                       margin: const EdgeInsets.all(ConstantValues.Margin_24),

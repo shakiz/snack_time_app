@@ -41,7 +41,7 @@ class OnBoardingViewModel extends ChangeNotifier {
       );
       notifyListeners();
     } else if (currentPage == 2) {
-      Get.offNamed(AppRoutes.APP_ROUTE_HOME);
+      Get.offNamed(AppRoutes.APP_ROUTE_MAIN);
     }
   }
 
