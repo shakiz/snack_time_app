@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:snack_time/features/MainPage.dart';
 import 'package:snack_time/features/details/SnackItemDetails.dart';
 import 'package:snack_time/features/home/HomePage.dart';
 import 'package:snack_time/features/onboarding/OnBoardingPage.dart';
+import 'package:snack_time/features/profile/ProfilePage.dart';
 import 'package:snack_time/routes/AppRoutes.dart';
 
 class AppPages {
@@ -9,8 +11,10 @@ class AppPages {
 
   static final routes = [
     GetPage(name: AppRoutes.APP_ROUTE_ONBOARDING, page: () => OnBoardingPage()),
+    GetPage(name: AppRoutes.APP_ROUTE_MAIN, page: () => MainPage()),
     GetPage(name: AppRoutes.APP_ROUTE_HOME, page: () => HomePage()),
     GetPage(
         name: AppRoutes.APP_ROUTE_ITEM_DETAILS, page: () => SnackItemDetails()),
+    GetPage(name: AppRoutes.APP_ROUTE_PROFILE, page: () => ProfilePage())
   ];
 }

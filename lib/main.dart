@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:snack_time/features/MainViewModel.dart';
 import 'package:snack_time/features/details/SnackItemDetailsViewModel.dart';
 import 'package:snack_time/features/home/HomeViewModel.dart';
+import 'package:snack_time/features/offers/OffersViewModel.dart';
 import 'package:snack_time/features/onboarding/OnBoardingViewModel.dart';
+import 'package:snack_time/features/orders/OrdersViewModel.dart';
 import 'package:snack_time/features/profile/ProfileViewModel.dart';
 import 'package:snack_time/routes/AppPages.dart';
 import 'package:snack_time/routes/AppRoutes.dart';
@@ -20,7 +23,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => OnBoardingViewModel()),
+        ChangeNotifierProvider(create: (context) => MainViewModel()),
         ChangeNotifierProvider(create: (context) => HomeVIewModel()),
+        ChangeNotifierProvider(create: (context) => OffersViewModel()),
+        ChangeNotifierProvider(create: (context) => OrdersViewModel()),
         ChangeNotifierProvider(
             create: (context) => SnackItemDetailsViewModel()),
         ChangeNotifierProvider(create: (context) => ProfileViewModel())
