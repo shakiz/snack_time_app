@@ -59,6 +59,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_plus.svg
   String get icPlus => 'assets/icons/ic_plus.svg';
 
+  /// File path: assets/icons/ic_profile.svg
+  String get icProfile => 'assets/icons/ic_profile.svg';
+
   /// File path: assets/icons/ic_rating.svg
   String get icRating => 'assets/icons/ic_rating.svg';
 
@@ -106,6 +109,7 @@ class $AssetsIconsGen {
         icNutrition3,
         icPlayWithBg,
         icPlus,
+        icProfile,
         icRating,
         icReaction,
         icRightArrow,

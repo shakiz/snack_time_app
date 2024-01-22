@@ -30,13 +30,11 @@ class _ShortcutWidgetState extends State<ShortcutWidget> {
           borderRadius: const BorderRadius.all(
             Radius.circular(ConstantValues.Radius_16),
           ),
-          border: Border.all(
-              color: AppColors.colorOnPrimaryBg.withOpacity(0.1), width: 1),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 4,
+              color: Colors.grey.withOpacity(0.25),
+              spreadRadius: 3,
+              blurRadius: 6,
               offset: const Offset(0, 1), // changes position of shadow
             )
           ]),
@@ -49,6 +47,8 @@ class _ShortcutWidgetState extends State<ShortcutWidget> {
           ),
           Text(
             title,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
             style: const TextStyle(
                 color: AppColors.colorOnPrimaryBg,
                 fontSize: ConstantValues.Font_Size_16,

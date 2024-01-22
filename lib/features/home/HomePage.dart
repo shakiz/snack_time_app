@@ -57,6 +57,10 @@ class _MyHomePageState extends State<HomePage> {
                       title: "Orders",
                       iconUrl: Assets.icons.icHistory,
                       isSelected: false),
+                  BottomNavItem(
+                      title: "Profile",
+                      iconUrl: Assets.icons.icProfile,
+                      isSelected: false),
                 ],
               ),
             ).withPadding(ConstantValues.Padding_8).withMarginSeparate(
