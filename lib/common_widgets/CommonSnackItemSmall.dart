@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pathao_app/common_widgets/Extensions.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
-import 'package:pathao_app/data/model/SnackItem.dart';
-import 'package:pathao_app/styles/AppColors.dart';
+import 'package:snack_time/common_widgets/Extensions.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
+import 'package:snack_time/data/model/SnackItem.dart';
+import 'package:snack_time/styles/AppColors.dart';
 
 import '../gen/assets.gen.dart';
 

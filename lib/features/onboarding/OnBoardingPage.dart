@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
-import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
-import 'package:pathao_app/gen/assets.gen.dart';
-import 'package:pathao_app/routes/AppRoutes.dart';
-import 'package:pathao_app/styles/AppColors.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
+import 'package:snack_time/features/onboarding/OnBoardingViewModel.dart';
+import 'package:snack_time/gen/assets.gen.dart';
+import 'package:snack_time/routes/AppRoutes.dart';
+import 'package:snack_time/styles/AppColors.dart';
 import 'package:provider/provider.dart';
 
 class OnBoardingPage extends StatefulWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:pathao_app/common_widgets/OnBoardingItem.dart';
-import 'package:pathao_app/routes/AppRoutes.dart';
+import 'package:snack_time/common_widgets/OnBoardingItem.dart';
+import 'package:snack_time/routes/AppRoutes.dart';
 
 import '../../gen/assets.gen.dart';
 
-class OnBoardingViewModel extends ChangeNotifier{
+class OnBoardingViewModel extends ChangeNotifier {
   int currentPage = 0;
   final PageController pageController = PageController();
 

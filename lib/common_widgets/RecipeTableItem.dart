@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
 
 import '../styles/AppColors.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:pathao_app/data/model/SnackItem.dart';
+import 'package:snack_time/data/model/SnackItem.dart';
 
 import '../../data/model/UserStory.dart';
 import '../../gen/assets.gen.dart';

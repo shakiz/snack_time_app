@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:pathao_app/common_widgets/RecipeTableItem.dart';
-import 'package:pathao_app/common_widgets/ShortcutWidget.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
-import 'package:pathao_app/features/details/SnackItemDetailsViewModel.dart';
-import 'package:pathao_app/gen/assets.gen.dart';
-import 'package:pathao_app/routes/AppRoutes.dart';
+import 'package:snack_time/common_widgets/RecipeTableItem.dart';
+import 'package:snack_time/common_widgets/ShortcutWidget.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
+import 'package:snack_time/features/details/SnackItemDetailsViewModel.dart';
+import 'package:snack_time/gen/assets.gen.dart';
 import 'package:provider/provider.dart';
 
 import '../../styles/AppColors.dart';

@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pathao_app/common_widgets/Extensions.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
-import 'package:pathao_app/styles/AppColors.dart';
+import 'package:snack_time/common_widgets/Extensions.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
+import 'package:snack_time/styles/AppColors.dart';
 
 class BottomNavItem extends StatefulWidget {
   String title, iconUrl;
   bool isSelected;
 
-  BottomNavItem({super.key, required this.title, required this.iconUrl, required this.isSelected});
+  BottomNavItem(
+      {super.key,
+      required this.title,
+      required this.iconUrl,
+      required this.isSelected});
 
   @override
-  State<BottomNavItem> createState() => _BottomNavItemState(title, iconUrl, isSelected);
+  State<BottomNavItem> createState() =>
+      _BottomNavItemState(title, iconUrl, isSelected);
 }
 
 class _BottomNavItemState extends State<BottomNavItem> {

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pathao_app/features/details/SnackItemDetailsViewModel.dart';
-import 'package:pathao_app/features/home/HomeViewModel.dart';
-import 'package:pathao_app/features/onboarding/OnBoardingViewModel.dart';
-import 'package:pathao_app/routes/AppPages.dart';
-import 'package:pathao_app/routes/AppRoutes.dart';
+import 'package:snack_time/features/details/SnackItemDetailsViewModel.dart';
+import 'package:snack_time/features/home/HomeViewModel.dart';
+import 'package:snack_time/features/onboarding/OnBoardingViewModel.dart';
+import 'package:snack_time/features/profile/ProfileViewModel.dart';
+import 'package:snack_time/routes/AppPages.dart';
+import 'package:snack_time/routes/AppRoutes.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => OnBoardingViewModel()),
         ChangeNotifierProvider(create: (context) => HomeVIewModel()),
-        ChangeNotifierProvider(create: (context) => SnackItemDetailsViewModel())
+        ChangeNotifierProvider(
+            create: (context) => SnackItemDetailsViewModel()),
+        ChangeNotifierProvider(create: (context) => ProfileViewModel())
       ],
       child: GetMaterialApp(
         title: 'Snack Time',

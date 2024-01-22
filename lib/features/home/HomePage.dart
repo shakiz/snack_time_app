@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:pathao_app/common_widgets/BottomNavItem.dart';
-import 'package:pathao_app/common_widgets/CommonSnackItem.dart';
-import 'package:pathao_app/common_widgets/CommonSnackItemSmall.dart';
-import 'package:pathao_app/common_widgets/DietItem.dart';
-import 'package:pathao_app/common_widgets/Extensions.dart';
-import 'package:pathao_app/constants/ConstantValues.dart';
-import 'package:pathao_app/features/home/HomeViewModel.dart';
-import 'package:pathao_app/gen/assets.gen.dart';
+import 'package:snack_time/common_widgets/BottomNavItem.dart';
+import 'package:snack_time/common_widgets/CommonSnackItem.dart';
+import 'package:snack_time/common_widgets/CommonSnackItemSmall.dart';
+import 'package:snack_time/common_widgets/DietItem.dart';
+import 'package:snack_time/common_widgets/Extensions.dart';
+import 'package:snack_time/constants/ConstantValues.dart';
+import 'package:snack_time/features/home/HomeViewModel.dart';
+import 'package:snack_time/gen/assets.gen.dart';
 import 'package:provider/provider.dart';
 
 import '../../common_widgets/ExtendedSearchBar.dart';
