@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:snack_time/common_widgets/Extensions.dart';
 import 'package:snack_time/features/MainViewModel.dart';
 import 'package:provider/provider.dart';
 import 'package:snack_time/gen/assets.gen.dart';
-
-import '../common_widgets/BottomNavItem.dart';
 import '../constants/ConstantValues.dart';
+import '../styles/AppColors.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -20,7 +20,6 @@ class _MyMainPageState extends State<MainPage> {
     return Consumer<MainViewModel>(
       builder:
           (BuildContext context, MainViewModel mainViewModel, Widget? child) {
-        print(mainViewModel.bottomNavSelectedIndex);
         return SafeArea(
           child: Scaffold(
             bottomNavigationBar: Container(
@@ -45,39 +44,39 @@ class _MyMainPageState extends State<MainPage> {
                         onTap: () {
                           mainViewModel.changeBottomNavTab(0);
                         },
-                        child: BottomNavItem(
-                          title: "Home",
-                          isSelected: mainViewModel.bottomNavSelectedIndex == 0,
-                          iconUrl: Assets.icons.icHome,
+                        child: bottomNavItem(
+                          "Home",
+                          mainViewModel.bottomNavSelectedIndex == 0,
+                          Assets.icons.icHome,
                         )),
                     GestureDetector(
                       onTap: () {
                         mainViewModel.changeBottomNavTab(1);
                       },
-                      child: BottomNavItem(
-                        title: "Offers",
-                        isSelected: mainViewModel.bottomNavSelectedIndex == 1,
-                        iconUrl: Assets.icons.icCampaign,
+                      child: bottomNavItem(
+                        "Offers",
+                        mainViewModel.bottomNavSelectedIndex == 1,
+                        Assets.icons.icCampaign,
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
                         mainViewModel.changeBottomNavTab(2);
                       },
-                      child: BottomNavItem(
-                        title: "Orders",
-                        isSelected: mainViewModel.bottomNavSelectedIndex == 2,
-                        iconUrl: Assets.icons.icHistory,
+                      child: bottomNavItem(
+                        "Orders",
+                        mainViewModel.bottomNavSelectedIndex == 2,
+                        Assets.icons.icHistory,
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
                         mainViewModel.changeBottomNavTab(3);
                       },
-                      child: BottomNavItem(
-                        title: "Profile",
-                        isSelected: mainViewModel.bottomNavSelectedIndex == 3,
-                        iconUrl: Assets.icons.icProfile,
+                      child: bottomNavItem(
+                        "Profile",
+                        mainViewModel.bottomNavSelectedIndex == 3,
+                        Assets.icons.icProfile,
                       ),
                     ),
                   ],
@@ -91,10 +90,35 @@ class _MyMainPageState extends State<MainPage> {
             body: PageView(
               controller: mainViewModel.pageController,
               children: mainViewModel.appPages,
+              onPageChanged: (index) {
+                //mainViewModel.changeBottomNavTab(index);
+              },
             ),
           ),
         );
       },
     );
+  }
+
+  Widget bottomNavItem(String title, bool isSelected, String iconUrl) {
+    return Container(
+      decoration: isSelected
+          ? BoxDecoration(
+              color: AppColors.colorPrimary.withOpacity(0.3),
+              borderRadius: const BorderRadius.all(
+                  Radius.circular(ConstantValues.Radius_16)))
+          : const BoxDecoration(),
+      child: Row(children: [
+        SizedBox(
+          width: 20,
+          height: 20,
+          child: SvgPicture.asset(iconUrl),
+        ),
+        const SizedBox(
+          width: ConstantValues.Margin_4,
+        ),
+        Text(title)
+      ]),
+    ).withPadding(ConstantValues.Padding_8);
   }
 }
