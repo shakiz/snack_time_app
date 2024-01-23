@@ -74,6 +74,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_search.svg
   String get icSearch => 'assets/icons/ic_search.svg';
 
+  /// File path: assets/icons/ic_settings.svg
+  String get icSettings => 'assets/icons/ic_settings.svg';
+
   /// File path: assets/icons/ic_share.svg
   String get icShare => 'assets/icons/ic_share.svg';
 
@@ -114,6 +117,7 @@ class $AssetsIconsGen {
         icReaction,
         icRightArrow,
         icSearch,
+        icSettings,
         icShare,
         icUtensils1,
         icUtensils2,
@@ -191,6 +195,10 @@ class $AssetsImagesGen {
   AssetGenImage get reviewImage3 =>
       const AssetGenImage('assets/images/review_image_3.png');
 
+  /// File path: assets/images/user_profile.png
+  AssetGenImage get userProfile =>
+      const AssetGenImage('assets/images/user_profile.png');
+
   /// List of all assets
   List<dynamic> get values => [
         bannerItemDetails,
@@ -209,7 +217,8 @@ class $AssetsImagesGen {
         onboarding3,
         reviewImage1,
         reviewImage2,
-        reviewImage3
+        reviewImage3,
+        userProfile
       ];
 }
 

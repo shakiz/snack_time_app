@@ -1,9 +1,10 @@
 class ConstantValues{
-  static const double Radius_42 = 42;
-  static const double Radius_20 = 20;
   static const double Radius_8 = 8;
   static const double Radius_16 = 16;
+  static const double Radius_20 = 20;
   static const double Radius_24 = 24;
+  static const double Radius_42 = 42;
+  static const double Radius_100 = 100;
 
   static const double Padding_2 = 2;
   static const double Padding_4 = 4;
@@ -19,6 +20,7 @@ class ConstantValues{
   static const double Margin_16 = 16;
   static const double Margin_20 = 20;
   static const double Margin_24 = 24;
+  static const double Margin_96 = 96;
 
   static const double Font_Size_12 = 12;
   static const double Font_Size_16 = 16;
