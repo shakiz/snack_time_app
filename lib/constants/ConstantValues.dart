@@ -24,6 +24,7 @@ class ConstantValues{
 
   static const double Font_Size_12 = 12;
   static const double Font_Size_16 = 16;
+  static const double Font_Size_18 = 18;
   static const double Font_Size_20 = 20;
   static const double Font_Size_24 = 24;
   static const double Font_Size_32 = 32;
