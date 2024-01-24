@@ -40,6 +40,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_like.svg
   String get icLike => 'assets/icons/ic_like.svg';
 
+  /// File path: assets/icons/ic_like_fill.svg
+  String get icLikeFill => 'assets/icons/ic_like_fill.svg';
+
   /// File path: assets/icons/ic_minus.svg
   String get icMinus => 'assets/icons/ic_minus.svg';
 
@@ -96,7 +99,8 @@ class $AssetsIconsGen {
   String get icWatch => 'assets/icons/ic_watch.svg';
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<dynamic> get values =>
+      [
         icAddStory,
         icArrowLeft,
         icBookmark,
@@ -106,6 +110,7 @@ class $AssetsIconsGen {
         icHistory,
         icHome,
         icLike,
+        icLikeFill,
         icMinus,
         icNutrition1,
         icNutrition2,
@@ -174,6 +179,10 @@ class $AssetsImagesGen {
   AssetGenImage get icStoryUser3 =>
       const AssetGenImage('assets/images/ic_story_user_3.png');
 
+  /// File path: assets/images/larger_avatar.png
+  AssetGenImage get largerAvatar =>
+      const AssetGenImage('assets/images/larger_avatar.png');
+
   /// File path: assets/images/onboarding_1.svg
   String get onboarding1 => 'assets/images/onboarding_1.svg';
 
@@ -195,6 +204,14 @@ class $AssetsImagesGen {
   AssetGenImage get reviewImage3 =>
       const AssetGenImage('assets/images/review_image_3.png');
 
+  /// File path: assets/images/sample_liked_pic_1.png
+  AssetGenImage get sampleLikedPic1 =>
+      const AssetGenImage('assets/images/sample_liked_pic_1.png');
+
+  /// File path: assets/images/sample_liked_pic_2.png
+  AssetGenImage get sampleLikedPic2 =>
+      const AssetGenImage('assets/images/sample_liked_pic_2.png');
+
   /// File path: assets/images/user_profile.png
   AssetGenImage get userProfile =>
       const AssetGenImage('assets/images/user_profile.png');
@@ -212,12 +229,15 @@ class $AssetsImagesGen {
         icStoryUser1,
         icStoryUser2,
         icStoryUser3,
+        largerAvatar,
         onboarding1,
         onboarding2,
         onboarding3,
         reviewImage1,
         reviewImage2,
         reviewImage3,
+        sampleLikedPic1,
+        sampleLikedPic2,
         userProfile
       ];
 }
