@@ -99,8 +99,7 @@ class $AssetsIconsGen {
   String get icWatch => 'assets/icons/ic_watch.svg';
 
   /// List of all assets
-  List<dynamic> get values =>
-      [
+  List<dynamic> get values => [
         icAddStory,
         icArrowLeft,
         icBookmark,
@@ -155,6 +154,14 @@ class $AssetsImagesGen {
   AssetGenImage get bannerNewSnackItem2 =>
       const AssetGenImage('assets/images/banner_new_snack_item_2.png');
 
+  /// File path: assets/images/ic_burger_king.png
+  AssetGenImage get icBurgerKing =>
+      const AssetGenImage('assets/images/ic_burger_king.png');
+
+  /// File path: assets/images/ic_cheese_slice.png
+  AssetGenImage get icCheeseSlice =>
+      const AssetGenImage('assets/images/ic_cheese_slice.png');
+
   /// File path: assets/images/ic_dummy_user.png
   AssetGenImage get icDummyUser =>
       const AssetGenImage('assets/images/ic_dummy_user.png');
@@ -166,6 +173,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_dummy_user_2.png
   AssetGenImage get icDummyUser2 =>
       const AssetGenImage('assets/images/ic_dummy_user_2.png');
+
+  /// File path: assets/images/ic_kfc.png
+  AssetGenImage get icKfc => const AssetGenImage('assets/images/ic_kfc.png');
+
+  /// File path: assets/images/ic_mcdonalds.png
+  AssetGenImage get icMcdonalds =>
+      const AssetGenImage('assets/images/ic_mcdonalds.png');
 
   /// File path: assets/images/ic_story_user_1.png
   AssetGenImage get icStoryUser1 =>
@@ -217,15 +231,20 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/user_profile.png');
 
   /// List of all assets
-  List<dynamic> get values => [
+  List<dynamic> get values =>
+      [
         bannerItemDetails,
         bannerNewDietItem,
         bannerNewSnackItem,
         bannerNewSnackItem1,
         bannerNewSnackItem2,
+        icBurgerKing,
+        icCheeseSlice,
         icDummyUser,
         icDummyUser1,
         icDummyUser2,
+        icKfc,
+        icMcdonalds,
         icStoryUser1,
         icStoryUser2,
         icStoryUser3,
