@@ -69,6 +69,8 @@ class _OfferItemState extends State<OfferItem> {
                 children: [
                   Container(
                       padding: const EdgeInsets.only(
+                          top: ConstantValues.Padding_4,
+                          bottom: ConstantValues.Padding_4,
                           left: ConstantValues.Padding_16,
                           right: ConstantValues.Padding_16),
                       decoration: BoxDecoration(
@@ -98,6 +100,8 @@ class _OfferItemState extends State<OfferItem> {
                   ),
                   Container(
                       padding: const EdgeInsets.only(
+                          top: ConstantValues.Padding_4,
+                          bottom: ConstantValues.Padding_4,
                           left: ConstantValues.Padding_16,
                           right: ConstantValues.Padding_16),
                       decoration: BoxDecoration(
@@ -113,6 +117,8 @@ class _OfferItemState extends State<OfferItem> {
                   ),
                   Container(
                       padding: const EdgeInsets.only(
+                          top: ConstantValues.Padding_4,
+                          bottom: ConstantValues.Padding_4,
                           left: ConstantValues.Padding_16,
                           right: ConstantValues.Padding_16),
                       decoration: BoxDecoration(
