@@ -26,21 +26,69 @@ class _OrderHistoryItemState extends State<OrderHistoryItem> {
       margin: const EdgeInsets.only(bottom: ConstantValues.Margin_16),
       decoration: BoxDecoration(
           borderRadius:
-              const BorderRadius.all(Radius.circular(ConstantValues.Radius_8)),
+              const BorderRadius.all(Radius.circular(ConstantValues.Radius_16)),
           border: Border.all(color: AppColors.colorBorderDivider, width: 2)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClipRRect(
-              borderRadius: const BorderRadius.all(
-                  Radius.circular(ConstantValues.Radius_16)),
-              child: Image.asset(
-                Assets.images.bannerItemDetails.path,
-                height: 96,
-                width: 96,
-                fit: BoxFit.fill,
-              )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                  borderRadius: const BorderRadius.all(
+                      Radius.circular(ConstantValues.Radius_16)),
+                  child: Image.asset(
+                    Assets.images.bannerItemDetails.path,
+                    height: 96,
+                    width: 96,
+                    fit: BoxFit.fill,
+                  )),
+              const SizedBox(
+                width: ConstantValues.Margin_16,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    orderHistory.productTitle,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "Roboto",
+                        decoration: TextDecoration.none,
+                        color: AppColors.colorOnPrimaryBg,
+                        fontSize: ConstantValues.Font_Size_16),
+                  ),
+                  Text(
+                    orderHistory.productDescription,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Roboto",
+                        decoration: TextDecoration.none,
+                        color: Colors.black54,
+                        fontSize: ConstantValues.Font_Size_12),
+                  ),
+                  Text(
+                    "\$${orderHistory.totalAmount}",
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Roboto",
+                        decoration: TextDecoration.none,
+                        color: AppColors.colorOnPrimaryBg,
+                        fontSize: ConstantValues.Font_Size_16),
+                  )
+                ],
+              ),
+              const SizedBox(
+                width: ConstantValues.Margin_16,
+              ),
+            ],
+          ),
           const SizedBox(
             height: ConstantValues.Margin_4,
           ),
