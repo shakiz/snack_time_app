@@ -33,6 +33,7 @@ class SnackTimeApp extends StatelessWidget {
         initialRoute: AppRoutes.APP_ROUTE_ONBOARDING,
         getPages: AppPages.routes,
         debugShowCheckedModeBanner: false,
+        defaultTransition: Transition.native,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
