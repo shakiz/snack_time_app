@@ -18,7 +18,8 @@ class AppPages {
     GetPage(
         name: AppRoutes.APP_ROUTE_MAIN,
         page: () => const MainPage(),
-        customTransition: CustomPageTransition(page: const MainPage())),
+        transition: Transition.leftToRight,
+        transitionDuration: Duration(microseconds: 2000)),
     GetPage(name: AppRoutes.APP_ROUTE_HOME, page: () => const HomePage()),
     GetPage(
         name: AppRoutes.APP_ROUTE_ITEM_DETAILS,
