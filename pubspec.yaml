@@ -22,6 +22,7 @@ dependencies:
   dots_indicator: ^3.0.0
   carousel_slider: ^4.2.1
   flutter_rating_bar: ^4.0.1
+  lottie: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +38,4 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/animations/

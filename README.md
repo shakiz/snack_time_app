@@ -2,7 +2,9 @@
 
 <img src="https://github.com/shakiz/snack_time_app/blob/master/assets/screenshots/app_banner.png?raw=true">
 
+<div align='center'>
 <h4> <a href=https://youtu.be/23tereRbLvw>View Demo</a> <span> · </span> <a href="https://github.com/shakiz/snack_time_app/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/shakiz/snack_time_app/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/shakiz/snack_time_app/issues"> Request Feature </a> </h4>
+</div>
 
 ## :star2: About the Project
 
@@ -17,6 +19,12 @@ combination of innovative features, personalized recommendations, and a smooth u
 - Search Food Item
 - Profile
 - Food Details
+-
+
+## :handshake: Contact
+
+Sakhawat Hossain - [@Linkedin](https://www.linkedin.com/in/sakhawat-hossain-762688127/) -
+shakil.py@gmail.com
 
 ## Getting Started
 
