@@ -2,6 +2,8 @@
 
 <img src="https://github.com/shakiz/snack_time_app/blob/master/assets/screenshots/app_banner.png?raw=true">
 
+## :star2: About the Project
+
 Craving a food app that's as unique as your taste buds? Look no further than Snack Time! Built with
 Flutter and powered by the dynamic duo of GetX and Provider, this app serves up a delightful
 combination of innovative features, personalized recommendations, and a smooth user experience.
