@@ -1,16 +1,20 @@
 import 'package:get/get.dart';
 import 'package:snack_time/features/MainPage.dart';
+import 'package:snack_time/features/splash/SplashPage.dart';
 import 'package:snack_time/features/details/SnackItemDetails.dart';
 import 'package:snack_time/features/home/HomePage.dart';
 import 'package:snack_time/features/onboarding/OnBoardingPage.dart';
 import 'package:snack_time/features/profile/ProfilePage.dart';
 import 'package:snack_time/routes/AppRoutes.dart';
-import 'package:snack_time/utils/CustomPageTransition.dart';
 
 class AppPages {
-  static const INITIAL_ROUTE = AppRoutes.APP_ROUTE_ONBOARDING;
+  static const INITIAL_ROUTE = AppRoutes.APP_ROUTE_SPLASH;
 
   static final routes = [
+    GetPage(
+        name: AppRoutes.APP_ROUTE_SPLASH,
+        page: () => const SplashPage(),
+        transition: Transition.fade),
     GetPage(
         name: AppRoutes.APP_ROUTE_ONBOARDING,
         page: () => const OnBoardingPage(),
