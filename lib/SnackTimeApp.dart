@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'package:snack_time/features/splash/SplashViewModel.dart';
 
 import 'features/MainViewModel.dart';
 import 'features/details/SnackItemDetailsViewModel.dart';
@@ -10,7 +11,6 @@ import 'features/onboarding/OnBoardingViewModel.dart';
 import 'features/orders/OrdersViewModel.dart';
 import 'features/profile/ProfileViewModel.dart';
 import 'routes/AppPages.dart';
-import 'routes/AppRoutes.dart';
 
 class SnackTimeApp extends StatelessWidget {
   const SnackTimeApp({super.key});
@@ -19,6 +19,7 @@ class SnackTimeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (context) => SplashViewModel()),
         ChangeNotifierProvider(create: (context) => OnBoardingViewModel()),
         ChangeNotifierProvider(create: (context) => MainViewModel()),
         ChangeNotifierProvider(create: (context) => HomeVIewModel()),
@@ -30,7 +31,7 @@ class SnackTimeApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         title: 'Snack Time',
-        initialRoute: AppRoutes.APP_ROUTE_ONBOARDING,
+        initialRoute: AppPages.INITIAL_ROUTE,
         getPages: AppPages.routes,
         debugShowCheckedModeBanner: false,
         defaultTransition: Transition.native,

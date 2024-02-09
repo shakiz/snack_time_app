@@ -9,6 +9,16 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsAnimationsGen {
+  const $AssetsAnimationsGen();
+
+  /// File path: assets/animations/splash_anim.json
+  String get splashAnim => 'assets/animations/splash_anim.json';
+
+  /// List of all assets
+  List<String> get values => [splashAnim];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -177,6 +187,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_kfc.png
   AssetGenImage get icKfc => const AssetGenImage('assets/images/ic_kfc.png');
 
+  /// File path: assets/images/ic_logo.png
+  AssetGenImage get icLogo => const AssetGenImage('assets/images/ic_logo.png');
+
   /// File path: assets/images/ic_mcdonalds.png
   AssetGenImage get icMcdonalds =>
       const AssetGenImage('assets/images/ic_mcdonalds.png');
@@ -231,8 +244,7 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/user_profile.png');
 
   /// List of all assets
-  List<dynamic> get values =>
-      [
+  List<dynamic> get values => [
         bannerItemDetails,
         bannerNewDietItem,
         bannerNewSnackItem,
@@ -244,6 +256,7 @@ class $AssetsImagesGen {
         icDummyUser1,
         icDummyUser2,
         icKfc,
+        icLogo,
         icMcdonalds,
         icStoryUser1,
         icStoryUser2,
@@ -264,6 +277,7 @@ class $AssetsImagesGen {
 class Assets {
   Assets._();
 
+  static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
